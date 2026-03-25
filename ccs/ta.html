@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traditional Arts | Moises Rosales</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="art12-page">
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="logo">Moises Rosales</a>
+      <div class="nav-links">
+        <a href="daa.html">Digital Art and Animation</a>
+        <a href="vve.html">Videography and Video Editing</a>
+        <a href="ta.html" class="active">Traditional Art</a>
+        <a href="ow.html">Other Works</a>
+        <a href="About.html">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-wrap">
+    <section class="page-intro">
+      <h1>Traditional Art</h1>
+      <p>This page features my handmade artwork.</p>
+    </section>
+
+    <section class="project-list-2col">
+
+      <article class="project-card-v">
+        <div class="project-image-B">
+          <img src="images/thumbnails/Cyan Flag thumbnail.png" alt="Random Flag"
+               onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+        </div>
+        <div class="project-info">
+          <p class="project-tag">Abstract Art Piece</p>
+          <h2>Random Flag</h2>
+          <p>Random abstract flag piece I made.</p>
+          <a class="button-link" href="Flag.html">View Painting</a>
+        </div>
+      </article>
+
+      <article class="project-card-v">
+        <div class="project-image-B vertical-frame">
+          <img src="images/Diptych 3.png" alt="Widow's View"
+               onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+        </div>
+        <div class="project-info">
+          <p class="project-tag">A Charcoal and Pencil Art Piece</p>
+          <h2>Widow's view</h2>
+          <p>
+            Widow's view is a diptych of two paintings depicting the same scene from different angles.
+            The art piece depicts a small figure standing on a balcony, gazing out at the hills and mountains.
+          </p>
+          <a class="button-link" href="diptych.html">View Piece</a>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+
+</body>
+</html>

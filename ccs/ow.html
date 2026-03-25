@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Other Works | Moises Rosales</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="art13-page">
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="logo">Moises Rosales</a>
+      <div class="nav-links">
+        <a href="daa.html">Digital Art and Animation</a>
+        <a href="vve.html">Videography and Video Editing</a>
+        <a href="ta.html">Traditional Art</a>
+        <a href="ow.html" class="active">Other Works</a>
+        <a href="About.html">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-wrap">
+    <section class="page-intro">
+      <h1>Other Works</h1>
+      <p>This page shows other projects I worked on.</p>
+    </section>
+
+    <section class="project-list-2col">
+
+      <article class="project-card-v">
+        <div class="project-image-B">
+          <img src="images/image-00.png" alt="Paint Program thumbnail"
+               onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+        </div>
+        <div class="project-info">
+          <p class="project-tag">Coded Painter</p>
+          <h2>Paint Program</h2>
+          <p>To practice basic coding concepts in a manageable way, 
+          I created a simple paint program in p5.js 
+          featuring three brushes and my own color palette.</p>
+          <a class="button-link" href="link1.html">View full Project</a>
+        </div>
+      </article>
+
+      <article class="project-card-v">
+        <div class="project-image-B">
+          <img src="images/thumbnails/CAT2.png" alt="Wild Wallpaper Cat thumbnail"
+               onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+        </div>
+        <div class="project-info">
+          <p class="project-tag">Wallpaper Code</p>
+          <h2>Wild Wallpaper Cat</h2>
+          <p>This interactive animated cat wallpaper uses p5.js
+          and shows five cats whose eyes and mouths move as you watch.</p>
+          <a class="button-link" href="ex1_/index3.html">View full Project</a>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+
+</body>
+</html>

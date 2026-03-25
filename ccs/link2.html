@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wild Wallpaper Cat| Moises Rosales</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="project-page">
+
+  <main class="page-wrap">
+    <button class="back-button" onclick="window.location.href='ow.html'">← Go Back</button>
+    <section class="video-showcase">
+      <h1>Wild Wallpaper Cat</h1>
+      <p class="video-note">
+        A wild wallpaper design featuring a cat.
+      </p>
+
+      <div class="diptych-wrapper">
+        <div class="diptych">
+          <div class="painting-card">
+            <img src="images/ex1thumb.png" alt="Painting One"
+                 onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+          </div>
+          
+        </div>
+        <p class="diptych-caption">
+          I created an animated cat wallpaper with one main cat in the center and four smaller cats placed diagonally to form an X. Each cat has its own look, with pointed ears, expressive eyes, detailed whiskers, and a mouth that moves. The eyes follow the mouse cursor, so the wallpaper feels interactive.
+The background changes and flickers gently, which makes the wallpaper more lively. I made sure all five cats move and change size together. I ran into some surprises while trying to make the mouths look real and keep the cats lined up, but I found solutions for both.
+Through this project, I learned how to group shapes, make repeating patterns, and animate based on time and what the user does. I also got better at organizing my code and adding special details to each cat.
+        </p>
+        <a class="button-link" href="ex1_/index3.html" target="_self">Open Program</a>
+      </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+  </script>
+
+</body>
+</html>

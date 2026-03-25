@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ART 74 | Moises Rosales</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="project-page">
+
+  <main class="page-wrap">
+    <button class="back-button" onclick="history.back()">← Go Back</button>
+    <section class="video-showcase">
+      <h1>Creative Coding Main Project</h1>
+      <p class="video-note">
+        A robotic figure coded in p5.js.
+
+      <div class="diptych-wrapper">
+        <div class="diptych">
+          <div class="painting-card">
+            <img src="images/Creative Coding Main Project.png" alt="Painting One"
+                 onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+          </div>
+        </div>
+        <p class="diptych-caption">
+         A robotic figure coded in p5.js. with simple geometric shapes, 
+with a quiet personality, 
+its bold, deep blue head, red eye, 
+and extensions shaped like triangles topped with gray spheres. 
+A charcoal mouth is placed beneath its red eye, 
+and a segmented steel base is used to ground the figure.
+        </p>
+        <a class="button-link" href="https://editor.p5js.org/moises.rosales/sketches/peUtfmz_m">View Code</a>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+  </script>
+
+</body>
+</html>

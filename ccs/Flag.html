@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Flag | Moises Rosales</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="project-page">
+
+  <main class="page-wrap">
+    <button class="back-button" onclick="history.back()">← Go Back</button>
+    <section class="video-showcase">
+      <h1>Random Flag</h1>
+      <p class="video-note">
+        Random abstract flag piece.
+        </p>
+
+      <div class="diptych-wrapper">
+        <div class="diptych">
+          <div class="painting-card">
+            <img src="images/Cyan Flag.png" alt="Painting One"
+                 onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+          </div>
+        </div>
+        <p class="diptych-caption">
+          The random flag is a piece I made in my late teens, 
+          a time when I was exploring abstract creativity. 
+          Made with paint and tape, it was and still is the first art piece I adore, 
+          a creation where I felt I poured in pure creativity, 
+          and I loved it. I gave it for display at an exhibition. 
+          I could have set a price to sell it, 
+          but I wouldn't let something I love be sold, 
+          so I just let it be watched. When the event was over, 
+          I took it back home, and it's still there to this day.
+        </p>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+  </script>
+
+</body>
+</html>

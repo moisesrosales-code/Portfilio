@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videography and Video Editing | Moises Rosales</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="art75-page">
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="logo">Moises Rosales</a>
+      <div class="nav-links">
+        <a href="daa.html">Digital Art and Animation</a>
+        <a href="vve.html" class="active">Videography and Video Editing</a>
+        <a href="ta.html">Traditional Art</a>
+        <a href="ow.html">Other Works</a>
+        <a href="About.html">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-wrap">
+    <section class="page-intro">
+      <h1>Videography and Video Editing</h1>
+      <p>
+        This page showcases my works in videography and video editing, 
+        including footage I shot and edited, as well as royalty-free clips.
+      </p>
+    </section>
+
+    <section class="project-list">
+
+      <article class="project-card">
+        <div class="project-image">
+          <img src="images/thumbnails/project 1 thumbnail.png" alt="Project 1 thumbnail"
+               onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+        </div>
+        <div class="project-info">
+          <p class="project-tag">Video Editing</p>
+          <h2>Taking in Nature</h2>
+          <p>A video edit featuring peaceful natural settings, 
+          like hills and forests, with wind and bird sounds in the background.</p>
+          <a class="button-link" href="project1.html">Open Video</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-image">
+          <img src="images/thumbnails/project 2 thumbnail.png" alt="Project 2 thumbnail"
+               onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+        </div>
+        <div class="project-info">
+          <p class="project-tag">Video Editing</p>
+          <h2>Stormy Dinner Party</h2>
+          <p>A video edit that uses only sound and vision to capture the 
+          atmosphere of a dinner party during a storm.</p>
+          <a class="button-link" href="project2.html">Open Video</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-image">
+          <img src="images/thumbnails/project 3 thumbnail.png" alt="Project 3 thumbnail"
+               onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+        </div>
+        <div class="project-info">
+          <p class="project-tag">Videography and Video Editing</p>
+          <h2>A Tennis Ball Enjoying Life</h2>
+          <p>A short story about a tennis ball that wanders around the SJSU campus 
+          and explores its surroundings with curiosity.</p>
+          <a class="button-link" href="project3.html">Open Video</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-image">
+          <img src="images/thumbnails/project 4 thumbnail.png" alt="Project 4 thumbnail"
+               onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+        </div>
+        <div class="project-info">
+          <p class="project-tag">Videography and Video Editing</p>
+          <h2>Ball's Dream</h2>
+          <p>A dreamlike video showing the same tennis ball moving through a park, 
+          sliding down the slides, and rolling through the open spaces.</p>
+          <a class="button-link" href="project4.html">Open Video</a>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paint Program | Moises Rosales</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="project-page">
+
+  <main class="page-wrap">
+    <button class="back-button" onclick="window.location.href='ow.html'">← Go Back</button>
+    <section class="video-showcase">
+      <h1>Paint Program</h1>
+      <p class="video-note">
+        A simple paint program with three brushes built using p5.js.
+      </p>
+
+     <div style="display: flex; gap: 20px; align-items: center;">
+
+  <!-- Left side - 2 images stacked -->
+  <div style="display: flex; flex-direction: column; gap: 12px; flex: 0 0 180px;">
+    <div class="painting-card">
+      <img src="images/p1_images/image-01.png" alt="Image One"
+           onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+    </div>
+    <div class="painting-card">
+      <img src="images/p1_images/image-02.png" alt="Image Two"
+           onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+    </div>
+    <div class="painting-card">
+      <img src="images/p1_images/image-03.png" alt="Image Five"
+           onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+    </div>
+    <div class="painting-card">
+      <img src="images/p1_images/image-04.png" alt="Image Five"
+           onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+    </div>
+    <div class="painting-card">
+      <img src="images/p1_images/image-05.png" alt="Image Five"
+           onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+    </div>
+    <div class="painting-card">
+      <img src="images/p1_images/image-06.png" alt="Image Five"
+           onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+    </div>
+
+  </div>
+
+  <!-- Main bubble in the middle -->
+  <div class="diptych-wrapper" style="flex: 1;">
+    <div class="diptych">
+      <div class="painting-card">
+        <img src="images/p1_images/image-00.png" alt="Image Three"
+             onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+      </div>
+    </div>
+    <p class="diptych-caption">For this project, I designed a simple paint program with three brushes using p5.js.
+            I am a beginner, and I wanted to get the hang of using functions, loops, and mouse
+            interaction, so I did not overcomplicate it. The color palette, inspired by one of
+            my own shirts, consists of dark charcoal, dusty rose, rust, beige, and blue.
+            The three brushes are a simple paintbrush, a texture brush, and a structure brush.</p>
+            <a class="button-link" href="project1_/index2.html" target="_self">Open Program</a>
+  </div>
+
+  <!-- Right side - 2 images stacked -->
+  <div style="display: flex; flex-direction: column; gap: 12px; flex: 0 0 180px;">
+    <div class="painting-card">
+      <img src="images/p1_images/image-07.png" alt="Image Four"
+           onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+    </div>
+    <div class="painting-card">
+      <img src="images/p1_images/image-08.png" alt="Image Five"
+           onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+    </div>
+    <div class="painting-card">
+      <img src="images/p1_images/image-09.png" alt="Image Five"
+           onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+    </div>
+    <div class="painting-card">
+      <img src="images/p1_images/image-10.png" alt="Image Five"
+           onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+    </div>
+    <div class="painting-card">
+      <img src="images/p1_images/image-11.png" alt="Image Five"
+           onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+    </div>
+    <div class="painting-card">
+      <img src="images/p1_images/image-12.png" alt="Image Five"
+           onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+    </div>
+  </div>
+
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+  </script>
+
+</body>
+</html>

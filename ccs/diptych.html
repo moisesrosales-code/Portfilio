@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Widow's view | Moises Rosales</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="project-page">
+
+  <main class="page-wrap">
+    <button class="back-button" onclick="history.back()">← Go Back</button>
+    <section class="video-showcase">
+      <h1>Widow's view</h1>
+      <p class="video-note">
+        A Charcoal and Pencil Art Piece I made. Widow's view is a diptych of two paintings depicting the same scene from different angles.
+            The art piece depicts a small figure standing on a balcony, gazing out at the hills and mountains.
+      </p>
+
+      <div class="diptych-wrapper">
+  <div class="diptych">
+
+    <div class="painting-card">
+      <img src="images/Diptych 1.png" alt="Painting One"
+           onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+    </div>
+
+    <div class="painting-card">
+      <img src="images/Diptych 2.png" alt="Painting Two"
+          onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+    </div>
+
+  </div>
+  <p class="diptych-caption">
+    The piece is a diptych, created in charcoal and pencil, 
+    depicting a figure looking out at distant hills and mountains from a balcony on a tower. 
+    The different textural techniques used on each piece give everything a unique identity, 
+    while the light and dark also enhance a sense of fascination.
+  </p>
+</div>
+
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+
+
+</body>
+</html>

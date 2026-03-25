@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ART 74 | Moises Rosales</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="project-page">
+
+  <main class="page-wrap">
+    <button class="back-button" onclick="history.back()">← Go Back</button>
+    <section class="video-showcase">
+      <h1>Pinterest Painting</h1>
+      <p class="video-note">
+        An abstract artwork.
+      </p>
+
+      <div class="diptych-wrapper">
+        <div class="diptych">
+          <div class="painting-card">
+            <img src="images/Pinterest Painting.png" alt="Painting One"
+                 onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+          </div>
+        </div>
+        <p class="diptych-caption">
+        This abstract artwork was made by combining 13 images, 
+        such as mountains, a space shuttle, a parakeet, pine branches,
+        a sports car, and lightning storms. 
+        I used Adobe Photoshop to change these images with a 
+        water technique to create a stained-glass effect. 
+        The piece was not carefully planned; 
+        I was just experimenting to see what would happen.
+</p>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+  </script>
+
+</body>
+</html>
